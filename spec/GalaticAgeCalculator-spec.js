@@ -39,19 +39,19 @@ describe('Galactic Age Calculator', function() {
   });
 
   it('should return years left depend on age, life expectancy on Mercury', function() {
-    expect(ageCalculator.yearsLeft(10, 80, "Mercury")).toEqual("Your life expectancy is "+((80/mercuryYearRatio)-(10/mercuryYearRatio)));
+    expect(ageCalculator.yearsLeft(10, 80, "Mercury")).toEqual("Your life expentancy is "+((80/mercuryYearRatio)-(10/mercuryYearRatio)));
   });
 
   it('should return years left depend on age, life expectancy on Venus', function() {
-    expect(ageCalculator.yearsLeft(10, 80, "Venus")).toEqual("Your life expectancy is "+((80/venusYearRatio)-(10/venusYearRatio)));
+    expect(ageCalculator.yearsLeft(10, 80, "Venus")).toEqual("Your life expentancy is "+((80/venusYearRatio)-(10/venusYearRatio)));
   });
 
   it('should return years left depend on age, life expectancy on Mars', function() {
-    expect(ageCalculator.yearsLeft(10, 80, "Mars")).toEqual("Your life expectancy is "+((80/marsYearRatio)-(10/marsYearRatio)));
+    expect(ageCalculator.yearsLeft(10, 80, "Mars")).toEqual("Your life expentancy is "+((80/marsYearRatio)-(10/marsYearRatio)));
   });
 
   it('should return years left depend on age, life expectancy on Jupiter', function() {
-    expect(ageCalculator.yearsLeft(10, 80, "Jupiter")).toEqual("Your life expectancy is "+((80/jupiterYearRatio)-(10/jupiterYearRatio)));
+    expect(ageCalculator.yearsLeft(10, 80, "Jupiter")).toEqual("Your life expentancy is "+((80/jupiterYearRatio)-(10/jupiterYearRatio)));
   });
 
   it('should return years past life expectancy on Mercury', function() {
