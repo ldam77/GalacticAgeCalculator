@@ -9,3 +9,7 @@ export function differenceBetweenTwoDatesInSeconds(date1, date2) {
 export function ageOnMercury(year) {
   return year/.24;
 }
+
+export function ageOnVenus(year) {
+  return year/.62;
+}
