@@ -21,7 +21,6 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-chrome-launcher',
       'karma-jasmine-html-reporter',
-      "karma-safari-launcher"
     ],
     reporters: ['progress', 'kjhtml'],
     port: 9876,
