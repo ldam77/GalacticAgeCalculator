@@ -15,7 +15,11 @@ describe('Galactic Age Calculator', function() {
     expect(ageCalculator.ageOnMercury(10)).toEqual(10/.24);
   });
 
-  it('should return age in Mercury Year', function() {
+  it('should return age in Venus Year', function() {
     expect(ageCalculator.ageOnVenus(10)).toEqual(10/.62);
+  });
+
+  it('should return age in Mar Year', function() {
+    expect(ageCalculator.ageOnMars(10)).toEqual(10/1.88);
   });
 });

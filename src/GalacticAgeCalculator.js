@@ -13,3 +13,7 @@ export function ageOnMercury(year) {
 export function ageOnVenus(year) {
   return year/.62;
 }
+
+export function ageOnMars(year) {
+  return year/1.88;
+}
