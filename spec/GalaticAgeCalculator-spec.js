@@ -22,4 +22,8 @@ describe('Galactic Age Calculator', function() {
   it('should return age in Mar Year', function() {
     expect(ageCalculator.ageOnMars(10)).toEqual(10/1.88);
   });
+
+  it('should return age in Jupiter Year', function() {
+    expect(ageCalculator.ageOnJupiter(10)).toEqual(10/11.86);
+  });
 });
