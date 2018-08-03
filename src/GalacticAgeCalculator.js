@@ -23,13 +23,19 @@ export function ageOnJupiter(year) {
 }
 
 export function yearsLeft(age, expectancy, planet) {
+  let yearsLeft;
   if (planet === 'Mercury') {
-    return ageOnMercury(expectancy) - ageOnMercury(age);
+    yearsLeft = ageOnMercury(expectancy) - ageOnMercury(age);
   } else if (planet === "Venus") {
-    return ageOnVenus(expectancy) - ageOnVenus(age);
+    yearsLeft = ageOnVenus(expectancy) - ageOnVenus(age);
   } else if (planet === "Mars") {
-    return ageOnMars(expectancy) - ageOnMars(age);
+    yearsLeft = ageOnMars(expectancy) - ageOnMars(age);
   } else if (planet === "Jupiter") {
-    return ageOnJupiter(expectancy) - ageOnJupiter(age);
+    yearsLeft = ageOnJupiter(expectancy) - ageOnJupiter(age);
+  }
+  if (yearsLeft >= 0) {
+    return "Your life expentancy is " + yearsLeft;
+  } else {
+    return "You've exceed expectancy by " + Math.abs(yearsLeft);
   }
 }

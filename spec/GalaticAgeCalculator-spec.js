@@ -39,18 +39,34 @@ describe('Galactic Age Calculator', function() {
   });
 
   it('should return years left depend on age, life expectancy on Mercury', function() {
-    expect(ageCalculator.yearsLeft(10, 80, "Mercury")).toEqual((80/mercuryYearRatio)-(10/mercuryYearRatio));
+    expect(ageCalculator.yearsLeft(10, 80, "Mercury")).toEqual("Your life expectancy is "+((80/mercuryYearRatio)-(10/mercuryYearRatio)));
   });
 
   it('should return years left depend on age, life expectancy on Venus', function() {
-    expect(ageCalculator.yearsLeft(10, 80, "Venus")).toEqual((80/venusYearRatio)-(10/venusYearRatio));
+    expect(ageCalculator.yearsLeft(10, 80, "Venus")).toEqual("Your life expectancy is "+((80/venusYearRatio)-(10/venusYearRatio)));
   });
 
   it('should return years left depend on age, life expectancy on Mars', function() {
-    expect(ageCalculator.yearsLeft(10, 80, "Mars")).toEqual((80/marsYearRatio)-(10/marsYearRatio));
+    expect(ageCalculator.yearsLeft(10, 80, "Mars")).toEqual("Your life expectancy is "+((80/marsYearRatio)-(10/marsYearRatio)));
   });
 
   it('should return years left depend on age, life expectancy on Jupiter', function() {
-    expect(ageCalculator.yearsLeft(10, 80, "Jupiter")).toEqual((80/jupiterYearRatio)-(10/jupiterYearRatio));
+    expect(ageCalculator.yearsLeft(10, 80, "Jupiter")).toEqual("Your life expectancy is "+((80/jupiterYearRatio)-(10/jupiterYearRatio)));
+  });
+
+  it('should return years past life expectancy on Mercury', function() {
+    expect(ageCalculator.yearsLeft(80, 10, "Mercury")).toEqual("You've exceed expectancy by "+Math.abs((10/mercuryYearRatio)-(80/mercuryYearRatio)));
+  });
+
+  it('should return years past life expectancy on Venus', function() {
+    expect(ageCalculator.yearsLeft(80, 10, "Venus")).toEqual("You've exceed expectancy by "+Math.abs((10/venusYearRatio)-(80/venusYearRatio)));
+  });
+
+  it('should return years past life expectancy on Mars', function() {
+    expect(ageCalculator.yearsLeft(80, 10, "Mars")).toEqual("You've exceed expectancy by "+Math.abs((10/marsYearRatio)-(80/marsYearRatio)));
+  });
+
+  it('should return years past life expectancy on Jupiter', function() {
+    expect(ageCalculator.yearsLeft(80, 10, "Jupiter")).toEqual("You've exceed expectancy by "+Math.abs((10/jupiterYearRatio)-(80/jupiterYearRatio)));
   });
 });
